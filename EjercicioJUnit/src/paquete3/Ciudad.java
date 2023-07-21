@@ -10,6 +10,30 @@ package paquete3;
  * @author reroes
  */
 public class Ciudad {
+    private String nombre;
+    private int poblacion;
+    public void establecerNombre(String nom) {
+        nombre = nom;
+    }
+
+    public String obtenerNombre() {
+        return nombre;
+    }
+
+    public void establecerPoblacion(int pob) {
+        poblacion = pob;
+    }
+    public int obtenerPoblacion() {
+        return poblacion;
+    }
     
-    
+    @Override
+    public String toString(){
+        String cadena=String.format("Ciudad de Ecuador\n Nombre: %s\n\n\t"
+                + "Población: %d\n",
+                nombre,
+                poblacion
+        );
+        return cadena;
+    }
 }
